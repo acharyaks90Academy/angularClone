@@ -1,0 +1,104 @@
+<main>
+  <div class="position-relative">
+    <section class="page-header section-dark" style="background-image: url('assets/img/brand/feat_bg.jpg')">
+      <!-- Background circles -->
+      <div class="shape shape-style-1 shape-primary">
+        <span class="span-150"></span>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-75"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>
+      </div>
+      <div class="container shape-container d-flex align-items-center py-lg">
+        <div class="col px-0">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 text-center">
+              <img src="./assets/img/brand/mob-app.png" style="width: 50px;" class="img-fluid">
+              <h2 class="presentation-subtitle text-white">UK TAXI & CAB NETWORK</h2>
+
+          <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+
+          <div class="btn-wrapper mt-6">
+          <form class="form-container">
+            
+
+            <div class="row">   
+              <div class="col-lg-6 col-sm-6">
+                <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                  <select class="btn btn-outline-danger">Select me
+                    <option *ngFor="let airport of airportlist" value= {{airport.id}}>
+                      {{airport.name}}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                  <select class="btn btn-outline-success">Select me
+                    <option *ngFor="let train of trainlist" value= {{train.id}}>
+                      {{train.name}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-sm-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Pickup Postcode or Location" class="form-control" />
+                </div>
+                <div class="form-group" [ngClass]="{'focused':focus===true}">
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Dropoff Postcode or Location" type="text" (focus)="focus=true" (blur)="focus=false">
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-success">
+                  <input type="text" placeholder="From" class="form-control is-valid" />
+                </div>
+                <div class="form-group has-danger">
+                  <input type="email" placeholder="To" class="form-control is-invalid" />
+                </div>
+              </div>
+            </div>
+
+
+
+            <a href="" target="_blank" class="btn btn-default btn-block btn-neutral btn-outline-primary btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fa fa-map-marker mr-2"></i>
+              </span>
+              <span class="nav-link-inner--text">Get Quotes</span>
+            </a>
+            <!-- <button type="submit" class="btn btn-success btn-block">Get Quotes</button>-->
+
+
+
+
+
+          </form>
+          </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+  </div>
+  <app-sections></app-sections>
+</main>
