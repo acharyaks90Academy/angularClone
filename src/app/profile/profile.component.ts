@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ProfileComponent implements OnInit {
-
+    model={
+        username:'Jack',
+        password:'',
+        email:''
+    }
     constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() {
+       let user =  localStorage.getItem('user');
+       if(user){
+           this.model = JSON.parse(user);
+       }
+    }
 
 }
